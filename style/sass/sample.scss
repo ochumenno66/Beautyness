@@ -1,0 +1,57 @@
+//*laptop*//
+%parent-block-div {
+  padding-right: 8.334%;
+  padding-left: 8.334%;
+}
+//*tablet*//
+%parent-block-div-tablet {
+  padding-right: 5.21%;
+  padding-left: 5.21%;
+  padding-top: 4.69%;
+  padding-bottom: 4.69%;
+}
+
+//*mobile*//
+%parent-block-div-mobile {
+  padding-right: 4.71%;
+  padding-left: 4.71%;
+  padding-top: 4.24%;
+  padding-bottom: 4.24%;
+}
+
+%h3 {
+  font-size: 15px;
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 1.5px;
+  color: $subtitle-color;
+}
+
+%button {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1.56px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: $button-background;
+  padding: 20px 44px;
+  border: none;
+}
+
+//* размеры h2 различаются в блоках, нужно дополнить в h2 sсss своего блока font-size, line-height, letter-spacing//
+%h2 {
+  font-family: $second-family;
+  font-weight: 400;
+  color: $main-color;
+}
+
+//* размеры текста в <p> также различаются в блоках, нужно дополнить в <p> scss своего блока font-size, line-height, letter-spacing//
+%p {
+  font-family: $font-family;
+  font-weight: 400;
+  color: $text-color;
+}

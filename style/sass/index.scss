@@ -1,0 +1,24 @@
+@import "variables.scss";
+@import "sample.scss";
+@import "header.scss";
+@import "welcome_to_B.scss";
+@import "spa_massage.scss";
+@import "take_your_care.scss";
+@import "our_services.scss";
+@import "testimonial.scss";
+@import "flat_discount.scss";
+@import "o_blog.scss";
+@import "footer.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header,
+.main,
+.footer {
+  max-width: 1440px;
+  margin: 0 auto;
+}

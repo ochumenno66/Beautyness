@@ -1,0 +1,198 @@
+.our_blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @extend %parent-block-div;
+  padding: 100px;
+}
+
+.our_blog__text-pretitle {
+  @extend %h3;
+  font-size: 15px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.our_blog__text-bigtitle {
+  @extend %h2;
+  font-size: 45px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.blog {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  margin: 50px;
+}
+
+.blog__card {
+  width: 380px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  background: #ebf3f5;
+}
+
+.blog-image {
+  width: 380px;
+  height: 288px;
+}
+
+time {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $subtitle-color;
+}
+
+.blog__card_title {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: $main-color;
+}
+
+.blog__card_text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: $text-color;
+}
+
+.blog-text {
+  width: 387px;
+  height: 255px;
+  display: inline-flex;
+  align-items: stretch;
+  flex-direction: column;
+  padding-left: 30px;
+}
+
+.blog__little-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $subtitle-color;
+}
+
+.our_blog a {
+  align-self: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.blog__bnt {
+  display: inline-flex;
+  width: 230px;
+  height: 57px;
+  border: 2px solid $button-background;
+  text-decoration: none;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $main-color;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog__bnt:hover {
+  background-color: $button-background;
+  color: $second-color;
+}
+
+//*laptop*//
+
+@media (768px <= width <= 1024px) {
+  .blog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 400px;
+  }
+
+  .blog__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+//*tablet*//
+
+@media (425px <= width <= 768px) {
+  .blog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 400px;
+    justify-content: center;
+    max-width: 400px;
+    padding-right: 5.21%;
+    padding-left: 5.21%;
+    padding-top: 4.69%;
+    padding-bottom: 4.69%;
+  }
+
+  .blog__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+//*mobile*//
+
+@media (320px <= width <= 425px) {
+  .blog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 300px;
+    padding-right: 4.71%;
+    padding-left: 4.71%;
+    padding-top: 4.24%;
+    padding-bottom: 4.24%;
+  }
+  .our_blog__text-pretitle {
+    font-size: 10px;
+    line-height: 20px;
+  }
+
+  .our_blog__text-bigtitle{
+    font-size: 25px;
+    line-height: 38px;
+  }
+  .blog__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 300px;
+    height: 600px;
+  }
+
+  .blog-image {
+    width: 300px;
+    height: auto;
+  }
+}

@@ -1,0 +1,150 @@
+.spa_massage{
+    display: flex;
+}
+
+.spa{
+    display: flex;
+    flex-direction:row;
+    width: 1200px;
+    @extend %parent-block-div;
+    gap: 30px;
+    padding: 100px;
+}
+
+.spa__card{
+    width: 380px;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+}
+
+.spa__card:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px 10px rgb(223, 213, 213);
+    transition: all 0.4s;
+}
+
+.card-image{
+    width: 380px;
+    height: 288px;
+    filter: grayscale(1);
+    transition: 1s;
+}
+
+.card-image:hover{
+    filter: grayscale(0);
+}
+
+.spa__card_title{
+    font-family:$second-family;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: $main-color;
+}
+
+.spa__card_text{
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    letter-spacing: 0.02em;
+    color: $text-color;
+}
+
+.spa__btn {
+    display: inline-flex; 
+    text-align: center; 
+    color: $main-color; 
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    border: 2px solid $button-background;
+    width: 157px;
+    height: 57px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    }
+
+    .spa__btn:hover{
+        background-color: $button-background ;
+        color:$main-background;
+    }
+
+//*laptop*//
+@media (768px <= width <= 1024px) {
+
+.spa{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    max-width: 400px;
+
+}
+
+.spa__card{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+}
+
+//*tablet*//
+
+@media (425px <= width <= 768px) {
+    .spa{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    max-width: 400px;
+    padding-right: 5.21%;
+    padding-left: 5.21%;
+    padding-top: 4.69%;
+    padding-bottom: 4.69%;
+}
+
+.spa__card{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.card-image{
+    width: 380px;
+    height: 288px;
+}
+}
+
+//*mobile*//
+
+@media(320px <= width <= 425px) {
+
+    .spa{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    max-width: 300px;
+    padding-right: 4.71%;
+    padding-left: 4.71%;
+    padding-top: 4.24%;
+    padding-bottom: 4.24%;
+}
+
+.spa__card{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    max-width: 300px;
+}
+
+.card-image{
+    width: 300px;
+    height: auto;
+    filter: none;
+}
+}

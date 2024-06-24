@@ -1,0 +1,193 @@
+a[href^="tel:"] {
+  @extend %p;
+  letter-spacing: 0%;
+  font-size: 16px;
+  color: $main-color;
+  line-height: 24px;
+  text-decoration: none;
+  margin: 0 0;
+}
+.fa fa-bars {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #5c8692;
+  border-radius: 0%;
+  background-color: #ebf3f5;
+  color: #5c8692;
+  text-align: center;
+}
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 7.3%;
+
+  & a[href^="tel:"]:before {
+    content: url("../../assets/header/telephone.svg");
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+    height: 25px;
+    width: 24px;
+  }
+  a[href^="tel:"]:hover {
+    color: $subtitle-color;
+  }
+  & svg:hover * {
+    fill: $subtitle-color;
+  }
+  &__burger {
+    display: none;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    padding: 1.389% 2.083% 1.389% 2.083%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+  }
+  &__right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 47.3%;
+  }
+  &__right-logo img {
+    padding-right: 20px;
+  }
+  &__menu {
+    width: 53.7%;
+  }
+
+  &__menu ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    align-items: center;
+  }
+  &__menu li:first-child {
+    padding-left: 20px;
+  }
+
+  &__menu a {
+    text-decoration: none;
+    @extend %p;
+    font-size: 17px;
+    line-height: 25.5px;
+    color: $main-color;
+    margin: 0;
+  }
+
+  &__menu a:hover {
+    color: $subtitle-color;
+  }
+
+  &__menu li button {
+    @extend %button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1.6px;
+    transition: all 0.4s;
+  }
+
+  &__menu button:hover {
+    background-color: white;
+    border: solid $subtitle-color 2px;
+    color: $subtitle-color;
+    & svg {
+      fill: $subtitle-color;
+    }
+  }
+  &__menu li {
+    vertical-align: middle;
+    text-align: left;
+  }
+  &__menu button p {
+    padding-left: 11px;
+  }
+  &__menu-buttonsvg {
+    height: 18px;
+    width: 18px;
+  }
+}
+@media (769px <= width <= 1025px) {
+  .header__wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .header__right {
+    width: 100%;
+    justify-content: center;
+  }
+  .header__menu {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header__right a {
+    padding-left: 8%;
+  }
+}
+@media (width <= $tablet) {
+  .header__menu ul {
+    display: none;
+  }
+  .header__right {
+    width: 85%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__menu {
+    display: block;
+    width: 15%;
+    height: 100%;
+  }
+  .header__right a {
+    font-size: 12px;
+    display: inline-block;
+    padding-top: 2%;
+  }
+  .header__burger {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #5c8692;
+    border-radius: 0%;
+    background-color: #ebf3f5;
+    color: #5c8692;
+    text-align: center;
+  }
+  .header__menu nav {
+    width: 100%;
+    height: 100%;
+  }
+  .topnav a {
+    color: $subtitle-color;
+    padding: 0;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+  }
+  .topnav #myLinks {
+    display: none;
+  }
+  .header__menu li:first-child {
+    padding-left: 0;
+  }
+  .header__menu li:last-child {
+    display: none;
+  }
+}

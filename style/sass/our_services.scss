@@ -1,0 +1,159 @@
+.title1 {
+  @extend %h3;
+  margin: 0 auto;
+  font-size: 1vw;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title2 {
+  @extend %h2;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: start;
+}
+
+.grid-item {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.image1 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image1 img,
+.image2 img {
+  width: auto;
+  height: auto;
+  transition: filter 0.3s ease;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.image2 {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image1 img:hover {
+  filter: grayscale(0%);
+  transition: all 0.5s ease;
+}
+
+.image2 img:hover {
+  filter: grayscale(0%);
+  transition: all 0.5s ease;
+}
+
+.text1 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 20%;
+  @extend %h2;
+}
+
+.text2 {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+  @extend %h2;
+}
+
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid $button-background;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 1.2em;
+}
+
+.service h3 {
+  margin: 0;
+}
+
+.button-container1,
+.button-container2 {
+  text-align: start;
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+.adaptive-button {
+  display: inline-block;
+  font-family: $font-family;
+  padding: 12px 24px;
+  background-color: white;
+  border: 2px $button-background solid;
+  color: #171313;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 0.12em;
+}
+
+.adaptive-button:hover {
+  background-color: $button-background;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+.hidden-on-desctop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    margin-bottom: 2%;
+  }
+
+  .grid-item {
+    display: none;
+  }
+
+  .image1,
+  .image2 {
+    display: none;
+  }
+
+  .hidden-on-desctop {
+    display: grid;
+  }
+}

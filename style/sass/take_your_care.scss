@@ -1,0 +1,257 @@
+.take_your_care{
+    @extend %parent-block-div;
+    background-color: $main-background;
+    padding-top: 8.2%;
+    padding-bottom: 8.2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.care{
+    display: flex;
+}
+
+.care__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.care__text-pretitle {
+    @extend %h3;
+    padding-left: 9px;
+    text-transform: uppercase;
+}
+
+.care__text-bigtitle {
+    @extend %h2;
+    font-size: 45px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    margin: 10px 0 1.5rem 0;
+    text-align: left;
+    color: $main-color;
+    }
+
+.care__text-p {
+    @extend %p;
+    font-size: 18px;
+    line-height: 170%;
+    color:$text-color;
+}
+
+.care__image{
+    display: flex;
+    flex-direction: row;
+    width: 188px;
+    height: 184px;
+    gap: 12px;
+}
+
+.care__card{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.care__card-beauty{
+    border: 2px solid $second-background;
+    width: 187px;
+    height: 182px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $second-color;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    flex-wrap: wrap;
+}
+
+.care__card-image{
+    width: 100%;
+    height: 72px;
+    top: 20px;
+    position: relative;
+}
+
+.care__card-quality{
+    border: 2px solid $second-background;
+    width: 193px;
+    height: 184px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $second-color;
+    flex-wrap: wrap;
+}
+
+.care__card-nature{
+    border: 2px solid $second-background;
+    width: 189px;
+    height: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $second-color;
+    flex-wrap: wrap;
+}
+
+.care__card-beauty:hover{
+    background: $button-background;
+    background-image: url(/assets/take_your_care/experts.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+}
+
+.care__card-quality:hover{
+    background: $button-background;
+    background-image: url(/assets/take_your_care/services.png);
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+}
+
+.care__card-nature:hover{
+    background: $button-background;
+    background-image: url(/assets/take_your_care/nature.png);
+    background-repeat: no-repeat;
+    background-position: 52% 15%;
+}
+
+.care__card-text{
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $main-color;
+}
+
+.care__card-text:hover{
+    color: $second-color;
+}
+
+.take__image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+//*laptop*//
+
+@media (768px <= width <= 1024px) {
+.take_your_care{
+display: flex;
+flex-direction: column;
+align-items: center;
+flex-wrap: nowrap;
+justify-content: center;
+}
+
+.care__text {
+display: flex;
+justify-content: center;
+align-items:center;
+max-width: 600px;
+}
+
+.care__card{
+display: flex;
+flex-direction: row;
+}
+
+.take__image{
+display: none;
+}
+}
+
+//*tablet*//
+
+@media (425px <= width <= 768px) {
+.take_your_care{
+padding-right: 5.21%;
+padding-left: 5.21%;
+padding-top: 4.69%;
+padding-bottom: 4.69%;
+}
+
+.take__image {
+display: none;
+}
+
+.care__text {
+order: 1;
+width: 100%;
+flex-grow: 1;
+max-width: 100%;
+align-items: center;
+padding: 3% 0 0 0;
+}
+
+.care__text-pretitle {
+font-size: 15px;
+}
+
+.care__text-bigtitle{
+font-size: 30px;
+line-height: 48px;
+}
+
+.care__text-p {
+padding-right: 0;
+font-size: 16px;
+line-height: 26px;
+text-align: center;
+flex-wrap: wrap;
+}
+
+.care__card{
+flex-wrap: wrap;
+justify-content: center;
+}
+}
+
+//*mobile*//
+
+@media(320px <= width <= 425px) {
+.take_your_care{
+display: flex;
+flex-direction: column;
+align-items: center;
+flex-wrap: wrap;
+justify-content: center;
+padding-right: 4.71%;
+padding-left: 4.71%;
+padding-top: 4.24%;
+padding-bottom: 4.24%;
+}
+
+.care__text {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.care__text-bigtitle{
+font-size: 25px;
+}
+
+.care__card{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.care__text-p{
+justify-content: center;
+}
+
+.take__image{
+display: none;
+}
+
+}
